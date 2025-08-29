@@ -118,6 +118,11 @@
 #     st.subheader("📊 Final Object Counts (Video)")
 #     st.write(dict(all_counts))
 
+import cv2
+import sys
+print("✅ OpenCV version:", cv2.__version__, " (from:", cv2.__file__, ")")
+print("✅ Python version:", sys.version)
+
 # app.py
 import streamlit as st
 import cv2
@@ -433,5 +438,6 @@ if col1.button("▶ Start"):
             st.info("Please provide a video source.")
 if col2.button("⏹ Stop"):
     st.session_state.processing = False
+
 
 
